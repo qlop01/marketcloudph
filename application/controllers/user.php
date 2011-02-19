@@ -2,21 +2,10 @@
 
 class User extends Controller 
 {
-	public function is_logged_in_redirect() //function that checks the user and redirects automatically
-	{
-		if (!$this->ion_auth->logged_in()) //checks if user is logged in
-		{
-			redirect('auth/login', 'refresh'); // redirects user to login if user is not logged in
-		}
-		else
-		{
-			return TRUE; 
-		}
-	}
 
 	function view(){
 	
-		$this->is_logged_in_redirect();
+		$this->ion_auth->is_logged_in_redirect();
 		$this->data['title']="Profile";
 		$this->data['user']=$this->ion_auth->get_user_array();//gets user data from the database
 		$this->data['main_content']="includes/view_user";
@@ -26,7 +15,7 @@ class User extends Controller
 
 	function update()
 	{
-		$this->is_logged_in_redirect();
+		$this->ion_auth->is_logged_in_redirect();
 		$this->load->library('form_validation'); //load validation library
 		$this->form_validation->set_rules('first_name', 'First name', 'required|xss_clean');
 		$this->form_validation->set_rules('last_name', 'Surname', 'required|xss_clean');
@@ -98,5 +87,4 @@ class User extends Controller
 		$this->load->view('master_page', $this->data); // passes all the data into master page view
 	}
 	
-
 }

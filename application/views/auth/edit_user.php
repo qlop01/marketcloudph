@@ -4719,5 +4719,6 @@
       <p><?php echo form_submit('submit', 'Submit');?></p>
 
     <?php echo form_close();?>
-
+<br>
+  <a href="#" onclick="history.go(-1); return false;">Back</a>
 </div>

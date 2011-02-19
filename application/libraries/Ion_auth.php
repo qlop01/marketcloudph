@@ -776,7 +776,7 @@ class Ion_auth
 
 	public function is_logged_in_redirect() //function that checks the user and redirects automatically
 	{
-		if (!$this->ion_auth->logged_in()) //checks if user is logged in
+		if (!$this->logged_in()) //checks if user is logged in
 		{
 			redirect('auth/login', 'refresh'); // redirects user to login if user is not logged in
 		}
