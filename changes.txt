@@ -1,0 +1,19 @@
+=== Changes made on marketcloudph ver 1.0.9 ===
+
+*created a edit item function try -> http://localhost/marketcloudph/item/edit/1 <-- uses the 3rd segment as item_id you must fist post an item so you can view it.
+
+*major revision on item controller <-- masyadong marami hahah pacheck na lang mismo un controller.
+
+*edited and added serveral function on item_model.
+
+*migrated all the item validation to item_model.
+
+*modified the method used by the post_item view from item/post to item/add. 
+
+*modified the method used by the edit_item view from item/edit to item/update. 
+
+*added a hidden field called $item_id into edit_item to retain item_id during post.
+
+=== Known Bugs ===
+
+*none so far because i havent done any extensive testing pls add here if you found some :)
