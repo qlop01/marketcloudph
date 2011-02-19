@@ -2,6 +2,7 @@
 
 class Message_Model extends Model 
 {
+	// added comment
 	/* 
 	* dont get confused in chain functions such as 
 	* $this->db->select()->from()->where()->get(); this is just a shortcut
